@@ -1,0 +1,25 @@
+package celeste.spring.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import celeste.spring.sungjuk.SungJuk;
+import celeste.spring.sungjuk.SungJukDAO;
+import celeste.spring.sungjuk.SungJukService;
+
+@Service("sjsrv")
+public class SungJukServiceImpl implements SungJukService {
+
+	@Autowired
+	private SungJukDAO sdao;
+
+	@Override
+	public void newSungJuk() {
+		SungJuk sj = new SungJuk("지현", 99, 97, 95);
+		System.out.println("성적 생성됨!");
+		
+		sdao.insertSungJuk(sj);
+		
+	}
+	
+}
