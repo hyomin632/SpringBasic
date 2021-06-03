@@ -9,11 +9,11 @@ public class HelloSpring5App06 {
 	
 	// 스프링 프레임워크 두 번째 사례
 
-    // BeanFactory가 아닌 ApplicationContext로 DI를 실행해 봄
+    	// BeanFactory가 아닌 ApplicationContext로 DI를 실행해 봄
 
-    // 추가 라이브러리
-    // spring-context
-    // spring-expression
+    	// 추가 라이브러리
+    	// spring-context
+    	// spring-expression
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new FileSystemXmlApplicationContext("src/bean05.xml");
